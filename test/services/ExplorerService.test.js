@@ -1,4 +1,4 @@
-const ExplorerService = require('./../../lib/services/ExplorerService')
+const ExplorerService = require("./../../lib/services/ExplorerService");
 
 describe("Test para ExplorersService", () => {
     test("Requerimiento 1: Calcular los explorers en una mision", () => {
@@ -15,8 +15,8 @@ describe("Test para ExplorersService", () => {
 
     test("Requerimiento 3: Obtener los usuarios de los explorers de una mision especifica", () => {
         const explorers = [{ mission: "node", githubUsername: "ajolonauta1"}];
-        const explorersInNode = ExplorerService.getExplorersUsernamesByMission(explorers, "node")
-        expect(explorersInNode).toStrictEqual(["ajolonauta1"])
+        const explorersInNode = ExplorerService.getExplorersUsernamesByMission(explorers, "node");
+        expect(explorersInNode).toStrictEqual(["ajolonauta1"]);
     });
 
     test("Requerimiento 4: Obtener los nombres de los explorers de una mision especifica", () => {
@@ -24,4 +24,4 @@ describe("Test para ExplorersService", () => {
         const explorersInNode = ExplorerService.getExplorersNamesByMission(explorers, "node");
         expect(explorersInNode).toStrictEqual(["Woopa1", "Woopa3"]);
     });
-})
+});
